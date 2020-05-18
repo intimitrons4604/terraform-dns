@@ -11,3 +11,11 @@ resource "aws_route53_zone" "domain" {
     "trons:terraform"   = "true"
   }
 }
+
+resource "aws_route53_record" "dummy" {
+  zone_id = aws_route53_zone.domain.zone_id
+  name    = "tf-dummy"
+  type    = "TXT"
+  ttl     = 300
+  records = ["tf-dummy"]
+}

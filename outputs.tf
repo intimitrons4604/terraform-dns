@@ -1,6 +1,6 @@
 output "fqdn" {
   description = "The FQDN for the zone"
-  value       = aws_route53_zone.domain.name
+  value       = "${aws_route53_zone.domain.name}."
 }
 
 output "zone_id" {

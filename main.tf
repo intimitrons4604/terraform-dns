@@ -13,8 +13,8 @@ resource "aws_route53_zone" "domain" {
 
 resource "aws_route53_record" "google_g_suite_verification" {
   zone_id = aws_route53_zone.domain.zone_id
-  name    = "@"
-  type    = "TXT"
+  name    = "laznepevzbrm"
+  type    = "CNAME"
   ttl     = 300
-  records = ["google-site-verification=BsdsEfumykT04H9iMMz-dmWPkDgmknGNPtq0Moq_diw"]
+  records = ["gv-sc7em4nloivnky.dv.googlehosted.com"]
 }
